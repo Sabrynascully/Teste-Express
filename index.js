@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 var cors = require('cors')
 
-var dados = require('./dbprodutos')
+var dados = require('./db')
 
 
 app.use(express.urlencoded({ extended: false }))
