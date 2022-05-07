@@ -1,3 +1,15 @@
+const express = require('express')
+const app = express()
+var cors = require('cors')
+
+var dados = require('./dbprodutos')
+
+
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
+
+app.use(cors());
 
 app.get('/usuario', (req, res) => {
     res.status(200).send(dados)
